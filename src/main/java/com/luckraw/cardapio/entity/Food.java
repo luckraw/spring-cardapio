@@ -21,6 +21,13 @@ public class Food {
     private String img;
     private Integer price;
 
+    public Food(FoodRequestDTO food) {
+        this.title = food.title();
+        this.img = food.img();
+        this.price = food.price();
+
+    }
+
     public Long getId() {
         return id;
     }
