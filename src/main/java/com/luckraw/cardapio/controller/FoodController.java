@@ -30,4 +30,18 @@ public class FoodController {
         repository.save(newFood);
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @PutMapping
+    public void updateFood(@RequestBody FoodRequestDTO food) {
+        Food newFood = new Food(food);
+        repository.save(newFood);
+    }
+
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @DeleteMapping
+    public void deleteFood(@RequestBody FoodRequestDTO food) {
+        Food newFood = new Food(food);
+        repository.delete(newFood);
+    }
+
 }
